@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="peoplebase">
+
+<body ng-controller="PeopleCtrl">
+
+<h1>People Finder</h1>
+
+<div ng-repeat="person in people">
+ 	{{person}}
+ 	<input type="button" value="Delete" ng-click="delete(person)"/>
+</div>
+
+<div>
+	<h1>Type In Names:</h1>
+	<form ng-submit="addPerson()"> 
+  		<input type="text" placeholder = "Fullname" ng-model="person"/>
+  		<input type="button" value="Add" ng-click="add()"/>
+	</form>
+</div>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+
+<script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+  
+<script src="http://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+
+<script src ='peoplefinder.js'></script>
+
+
+</body>
+</html>
